@@ -2,6 +2,6 @@
     "name": "minecraftprotocol_fromnotch",
     "private": true,
     "dependencies": {
-        "reinarpg-protocol": "latest"
+        "reinarpg-protocol": "github:reinarpg/reinarpg-protocol"
     }
 }
