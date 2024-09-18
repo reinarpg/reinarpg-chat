@@ -4,8 +4,8 @@ const expect = require('expect').default
 
 describe('MessageBuilder', () => {
   describe('1.16.5', () => {
-    const { MessageBuilder } = require('prismarine-chat')('1.16.5')
-    const ChatMessage = require('prismarine-chat')('1.16.5')
+    const { MessageBuilder } = require('reinarpg-chat')('1.16.5')
+    const ChatMessage = require('reinarpg-chat')('1.16.5')
     describe('setX', () => {
       const properties = [
         ['Bold', true],

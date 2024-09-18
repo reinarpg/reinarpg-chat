@@ -1,5 +1,5 @@
-const ChatMessage = require('prismarine-chat')('1.8')
-const { createClient } = require('minecraft-protocol')
+const ChatMessage = require('reinarpg-chat')('1.8')
+const { createClient } = require('reinarpg-protocol')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node fromnotch.js <host> <port> [<name>] [<password>]')

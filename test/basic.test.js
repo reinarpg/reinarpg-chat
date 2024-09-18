@@ -3,7 +3,7 @@ const expect = require('expect').default
 const assert = require('assert')
 
 describe('Parsing chat on 1.16', function () {
-  const ChatMessage = require('prismarine-chat')('1.16')
+  const ChatMessage = require('reinarpg-chat')('1.16')
   it('Parsing a chat message', () => {
     const msg = new ChatMessage({ text: 'Example chat message' })
     expect(msg.toString()).toBe('Example chat message')
@@ -106,8 +106,8 @@ describe('Parsing chat on 1.16', function () {
 describe('Client-side chat formatting', function () {
   const sender = { insertion: 'Player', clickEvent: { action: 'suggest_command', value: '/tell Player ' }, hoverEvent: { action: 'show_entity', contents: { type: 'minecraft:player', id: '00000000-00000000-00000000-00000000', name: { text: 'Player' } } }, text: 'Player' }
   it('loads on 1.19', function () {
-    const registry = require('prismarine-registry')('1.19')
-    const ChatMessage = require('prismarine-chat')(registry)
+    const registry = require('reinarpg-registry')('1.19')
+    const ChatMessage = require('reinarpg-chat')(registry)
     registry.loadDimensionCodec(registry.loginPacket.dimensionCodec)
     const msg = ChatMessage.fromNetwork(registry.chatFormattingByName['minecraft:emote_command'].id, {
       sender,
@@ -117,8 +117,8 @@ describe('Client-side chat formatting', function () {
   })
 
   it('loads exotic formatting', function () {
-    const registry = require('prismarine-registry')('1.19')
-    const ChatMessage = require('prismarine-chat')(registry)
+    const registry = require('reinarpg-registry')('1.19')
+    const ChatMessage = require('reinarpg-chat')(registry)
     registry.chatFormattingById = {
       0: { formatString: '💬 [%s] %s » %s ⏎', parameters: ['rank', 'sender', 'content'] }
     }
@@ -128,7 +128,7 @@ describe('Client-side chat formatting', function () {
 })
 
 describe('Big message parsing', function () {
-  const ChatMessage = require('prismarine-chat')('1.16')
+  const ChatMessage = require('reinarpg-chat')('1.16')
   const translate = '%1$s'.repeat(32)
   const format = {
     text: 'a',

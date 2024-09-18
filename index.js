@@ -1,13 +1,13 @@
 const mojangson = require('mojangson')
 const vsprintf = require('./format')
-const debug = require('debug')('minecraft-protocol')
-const nbt = require('prismarine-nbt')
+const debug = require('debug')('reinarpg-protocol')
+const nbt = require('reinarpg-nbt')
 const getValueSafely = (obj, key, def) => Object.hasOwn(obj, key) ? obj[key] : def
 const MAX_CHAT_DEPTH = 8
 const MAX_CHAT_LENGTH = 4096
 
 function loader (registryOrVersion) {
-  const registry = typeof registryOrVersion === 'string' ? require('prismarine-registry')(registryOrVersion) : registryOrVersion
+  const registry = typeof registryOrVersion === 'string' ? require('reinarpg-registry')(registryOrVersion) : registryOrVersion
   const defaultLang = registry.language
   const defaultAnsiCodes = {
     '§0': '\u001b[30m',

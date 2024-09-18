@@ -1,5 +1,5 @@
 const mojangson = require('mojangson')
-const nbt = require('prismarine-nbt')
+const nbt = require('reinarpg-nbt')
 
 const supportedColors = {
   0: 'black',
@@ -91,7 +91,7 @@ function loader (registry) {
     setClickEvent (action, value) { this.clickEvent = { action, value }; return this }
     /**
      * @param {'show_text'|'show_entity'|'show_item'} action
-     * @param {import('prismarine-item').Item|import('prismarine-entity').Entity|MessageBuilder} data
+     * @param {import('reinarpg-item').Item|import('reinarpg-entity').Entity|MessageBuilder} data
      * @param {'contents'|'value'} type [type='contents']
      */
     setHoverEvent (action, data, type = 'contents') {

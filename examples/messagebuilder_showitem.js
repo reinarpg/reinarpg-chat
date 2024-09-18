@@ -1,9 +1,9 @@
 const nbt = require('./nbt')
 
 const version = '1.17'
-const mcData = require('minecraft-data')(version)
-const { MessageBuilder } = require('prismarine-chat')(version)
-const Item = require('prismarine-item')(version)
+const mcData = require('reinarpg-data')(version)
+const { MessageBuilder } = require('reinarpg-chat')(version)
+const Item = require('reinarpg-item')(version)
 const item = new Item(mcData.itemsByName.cake.id, 1, null, nbt.comp({
   display: nbt.comp({
     Name: nbt.string('Sharp Axe'),

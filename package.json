@@ -1,5 +1,5 @@
 {
-  "name": "prismarine-chat",
+  "name": "reinarpg-chat",
   "version": "1.10.1",
   "description": "Wrapper for a minecraft chat message",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrismarineJS/prismarine-chat.git"
+    "url": "git+https://github.com/PrismarineJS/reinarpg-chat.git"
   },
   "keywords": [
     "prismarine",
@@ -20,19 +20,19 @@
   "author": "Romain Beaumont",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PrismarineJS/prismarine-chat/issues"
+    "url": "https://github.com/PrismarineJS/reinarpg-chat/issues"
   },
-  "homepage": "https://github.com/PrismarineJS/prismarine-chat#readme",
+  "homepage": "https://github.com/PrismarineJS/reinarpg-chat#readme",
   "devDependencies": {
     "expect": "^29.1.0",
     "mocha": "^10.0.0",
-    "prismarine-chat": "file:.",
+    "reinarpg-chat": "file:.",
     "standard": "^17.0.0",
-    "prismarine-item": "^1.10.0"
+    "reinarpg-item": "github:reinarpg/reinarpg-item"
   },
   "dependencies": {
     "mojangson": "^2.0.1",
-    "prismarine-nbt": "^2.0.0",
-    "prismarine-registry": "^1.4.0"
+    "reinarpg-nbt": "github:reinarpg/reinarpg-nbt",
+    "reinarpg-registry": "github:reinarpg/reinarpg-registry"
   }
 }
